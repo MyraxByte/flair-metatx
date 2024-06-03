@@ -1,0 +1,73 @@
+{
+  "name": "@flair-sdk/metatx",
+  "version": "2.82.3",
+  "private": false,
+  "author": "flair.dev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flair-sdk/typescript.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.js",
+      "default": "./src/index.js",
+      "types": "./dist/types.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "module": "dist/index.es.js",
+  "types": "dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "react-scripts test",
+    "test:watch": "jest --watch"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "peerDependencies": {
+    "ethers": "*",
+    "got": "*",
+    "randombytes": "*"
+  },
+  "peerDependenciesMeta": {
+    "got": {
+      "optional": true
+    },
+    "ethers": {
+      "optional": true
+    },
+    "randombytes": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@flair-sdk/common": "https://github.com/MyraxByte/flair-common.git",
+    "ethers": ">=5.5.1",
+    "got": "^11.8.5",
+    "randombytes": "^2.1.0",
+    "utility-types": "^3.10.0"
+  },
+  "devDependencies": {
+    "@types/randombytes": "^2.0.0"
+  }
+}
